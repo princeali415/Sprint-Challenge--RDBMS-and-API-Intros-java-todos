@@ -15,12 +15,13 @@ public class TodoServiceImpl implements TodosService
     @Autowired
     public TodoRepository todoRepository;
 
+    //get todos by id
+
     @Override
     public void markComplete(long todoid)
     {
         Todo newTodo = todoRepository.findById(todoid)
             .orElseThrow(() -> new EntityNotFoundException("Todo "+ todoid + " Not Found"));
-        newTodo.setCompleted(!newTodo.isCompleted());
-        
+        newTodo.setCompleted(true);
     }
 }

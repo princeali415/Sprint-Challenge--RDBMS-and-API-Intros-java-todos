@@ -35,7 +35,7 @@ public class UserController
      * @return JSON list of all users with a status of OK
      * @see UserService#findAll() UserService.findAll()
      */
-    @GetMapping(value = "/users",
+    @GetMapping(value = "/users",           //Working!
         produces = {"application/json"})
     public ResponseEntity<?> listAllUsers()
     {
@@ -52,7 +52,7 @@ public class UserController
      * @return JSON object of the user you seek
      * @see UserService#findUserById(long) UserService.findUserById(long)
      */
-    @GetMapping(value = "/user/{userId}",
+    @GetMapping(value = "/user/{userId}",       //WORKING!
         produces = {"application/json"})
     public ResponseEntity<?> getUserById(
         @PathVariable
@@ -72,7 +72,7 @@ public class UserController
      * @throws URISyntaxException Exception if something does not work in creating the location header
      * @see UserService#save(User) UserService.save(User)
      */
-    @PostMapping(value = "/user",
+    @PostMapping(value = "/user",                   // WORKING!
         consumes = {"application/json"})
     public ResponseEntity<?> addNewUser(
         @Valid
@@ -102,7 +102,7 @@ public class UserController
      * @param id the primary key of the user you wish to delete
      * @return Status of OK
      */
-    @DeleteMapping(value = "/user/{id}")
+    @DeleteMapping(value = "/user/{id}")            // WORKS when ID is not found and When it is!
     public ResponseEntity<?> deleteUserById(
         @PathVariable
             long id)
@@ -116,7 +116,7 @@ public class UserController
      *
      * @return List of usernames, count of non completed tasks
      */
-    @GetMapping(value = "/users/todos",
+    @GetMapping(value = "/users/todos",         //WORKS
         produces = {"application/json"})
     public ResponseEntity<?> getUserNameCountTodos()
     {
