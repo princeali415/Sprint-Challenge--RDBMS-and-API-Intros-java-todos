@@ -21,5 +21,6 @@ public class TodoServiceImpl implements TodosService
         Todo newTodo = todoRepository.findById(todoid)
             .orElseThrow(() -> new EntityNotFoundException("Todo "+ todoid + " Not Found"));
         newTodo.setCompleted(!newTodo.isCompleted());
+        
     }
 }
