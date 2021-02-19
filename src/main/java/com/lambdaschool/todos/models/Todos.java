@@ -6,7 +6,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "todos")
-public class Todo extends Auditable
+public class Todos extends Auditable
 {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -24,7 +24,7 @@ public class Todo extends Auditable
 
     // Constructor
 
-    public Todo(
+    public Todos(
         User user,
         String description
         )
@@ -34,7 +34,7 @@ public class Todo extends Auditable
 
     }
 
-    public Todo()
+    public Todos()
     {
         //required by JPA
     }

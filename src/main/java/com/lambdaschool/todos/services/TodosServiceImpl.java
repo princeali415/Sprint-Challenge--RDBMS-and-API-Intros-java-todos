@@ -1,6 +1,6 @@
 package com.lambdaschool.todos.services;
 
-import com.lambdaschool.todos.models.Todo;
+import com.lambdaschool.todos.models.Todos;
 import com.lambdaschool.todos.repository.TodoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,8 +20,8 @@ public class TodosServiceImpl implements TodosService
     @Override
     public void markComplete(long todoid)
     {
-        Todo newTodo = todoRepository.findById(todoid)
+        Todos newTodos = todoRepository.findById(todoid)
             .orElseThrow(() -> new EntityNotFoundException("Todo "+ todoid + " Not Found"));
-        newTodo.setCompleted(true);
+        newTodos.setCompleted(true);
     }
 }

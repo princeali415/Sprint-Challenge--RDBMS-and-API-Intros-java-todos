@@ -47,7 +47,7 @@ public class User extends Auditable
     //one to many with todos
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonIgnoreProperties(value = "user")
-    private List<Todo> todos = new ArrayList<>();
+    private List<Todos> todos = new ArrayList<>();
 
 
     /**
@@ -171,12 +171,12 @@ public class User extends Auditable
     // add getter and setter for todos list
 
 
-    public List<Todo> getTodos()
+    public List<Todos> getTodos()
     {
         return todos;
     }
 
-    public void setTodos(List<Todo> todos)
+    public void setTodos(List<Todos> todos)
     {
         this.todos = todos;
     }
