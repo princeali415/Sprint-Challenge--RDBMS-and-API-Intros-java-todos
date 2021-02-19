@@ -10,7 +10,7 @@ import javax.persistence.EntityNotFoundException;
 
 @Transactional
 @Service(value = "todosService")
-public class TodoServiceImpl implements TodosService
+public class TodosServiceImpl implements TodosService
 {
     @Autowired
     public TodoRepository todoRepository;
