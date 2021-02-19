@@ -2,6 +2,7 @@ package com.lambdaschool.todos.controllers;
 
 import com.lambdaschool.todos.TodosApplication;
 import com.lambdaschool.todos.TodosApplicationTests;
+import com.lambdaschool.todos.models.Todo;
 import com.lambdaschool.todos.models.Todos;
 import com.lambdaschool.todos.models.User;
 import com.lambdaschool.todos.services.TodosService;
@@ -39,7 +40,7 @@ public class TodosControllerIntegrationTest
     UserService userService;
 
     @Autowired
-    TodosService todosService;
+    TodosService todosService; // what the hell is going on here
 
     @Before
     public void setUp() throws Exception
@@ -63,7 +64,7 @@ public class TodosControllerIntegrationTest
             "testpassword",
             "test@email.com");
         newUser.getTodos()
-            .add(new Todos(newUser,
+            .add(new Todo(newUser,
                 "testTodo"));
         newUser = userService.save(newUser);
 

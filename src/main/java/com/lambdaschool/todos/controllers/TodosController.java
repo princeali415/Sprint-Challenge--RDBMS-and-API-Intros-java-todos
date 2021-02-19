@@ -19,6 +19,7 @@ public class TodosController
     /**
      * Using the Todos service to process user, todos combinations data
      */
+    //@SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection") // removes error
     @Autowired
     TodosService todosService;
 
