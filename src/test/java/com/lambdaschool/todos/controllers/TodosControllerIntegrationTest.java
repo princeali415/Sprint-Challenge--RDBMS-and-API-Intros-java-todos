@@ -1,6 +1,5 @@
 package com.lambdaschool.todos.controllers;
 
-import com.lambdaschool.todos.TodosApplication;
 import com.lambdaschool.todos.TodosApplicationTests;
 import com.lambdaschool.todos.models.Todo;
 import com.lambdaschool.todos.models.User;
